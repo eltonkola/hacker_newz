@@ -62,7 +62,7 @@ class HNItem {
         by: json['by'] as String,
         time: timeValue,
         text: json['text'] !=null ? json['text'] as String : "",
-        url: json['url'] as String,
+        url: json['url'] !=null ? json['url'] as String : "",
         title: json['title'] as String,
         deleted: json['deleted'] as bool,
         dead: json['dead']  as bool,
