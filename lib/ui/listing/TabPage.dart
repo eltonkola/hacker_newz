@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hacker_newz/model/AppTabItem.dart';
 import 'package:hacker_newz/repo/ApiService.dart';
-import 'package:hacker_newz/ui/ItemRow.dart';
-import 'package:hacker_newz/ui/details/DetailsPage.dart';
+import 'package:hacker_newz/ui/listing/ItemRow.dart';
 
 
 class TabPage extends StatelessWidget {

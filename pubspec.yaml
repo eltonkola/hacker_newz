@@ -14,7 +14,7 @@ environment:
 
 dependencies:
   http: ^0.11.3
-  flutter_webview_plugin: ^0.3.0+2
+  webview_flutter: ^0.1.1
   flutter:
     sdk: flutter
 
