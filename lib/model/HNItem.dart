@@ -59,7 +59,7 @@ class HNItem {
       HNItem item = HNItem(
         id: json['id'] as int,
         type: json['type'] as String,
-        by: json['by'] as String,
+        by: json['by'] !=null ? json['by'] as String : "",
         time: timeValue,
         text: json['text'] !=null ? json['text'] as String : "",
         url: json['url'] !=null ? json['url'] as String : "",
@@ -70,8 +70,8 @@ class HNItem {
         poll: json['poll'] as int,
         score: json['score'] as int,
         descendants: json['descendants'] as int,
-        kids: json['kids']!=null ? List<int>.from(json['kids']) : null,
-        parts: json['parts'] !=null ? List<int>.from(json['parts']): null,
+        kids: json['kids']!=null ? List<int>.from(json['kids']) : new List<int>(),
+        parts: json['parts'] !=null ? List<int>.from(json['parts']): new List<int>(),
 
 
       );

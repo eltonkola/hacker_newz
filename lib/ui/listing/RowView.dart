@@ -28,7 +28,7 @@ class RowView extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (_) => DetailsPage(item: snapshot.data),
+                    builder: (_) => DetailsPage(apiService: apiService,item: snapshot.data),
                   ),
                 );
               },

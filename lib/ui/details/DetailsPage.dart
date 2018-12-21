@@ -4,12 +4,14 @@ import 'package:meta/meta.dart';
 import 'package:hacker_newz/ui/details/BrowserTab.dart';
 import 'package:hacker_newz/ui/details/CommentsTab.dart';
 import 'package:hacker_newz/ui/details/ReaderTab.dart';
+import 'package:hacker_newz/repo/ApiService.dart';
 
 class DetailsPage extends StatelessWidget {
 
-  DetailsPage({@required this.item});
+  DetailsPage({@required this.apiService, @required this.item});
 
   final HNItem item;
+  final ApiService apiService;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class DetailsPage extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              new CommentsTab(item:item),
+              new CommentsTab(apiService: apiService,item:item),
               new BrowserTab(url: item.url),
               new ReaderTab(item:item),
             ],

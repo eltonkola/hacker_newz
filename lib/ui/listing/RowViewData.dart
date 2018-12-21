@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hacker_newz/model/HNItem.dart';
-
+import 'package:timeago/timeago.dart' as timeago;
 class RowViewData extends StatelessWidget {
 
   HNItem item;
@@ -98,7 +98,7 @@ class RowViewData extends StatelessWidget {
                 ),
               ),
               Text(
-                item.time.toIso8601String() + ' - ' + item.by,
+              timeago.format(item.time) + ' - ' + item.by,
                 maxLines: 1,
                 style: TextStyle(
                   fontSize: 14,
