@@ -1,16 +1,15 @@
-# hacker_newz
+# Hacker_Newz
 
-A new Flutter project.
+how can i learn flutter? by making an app!
 
-## Getting Started
+## About
 
-This project is a starting point for a Flutter application.
+This project playground for me, to experiment and play with flutter.
 
-A few resources to get you started if this is your first Flutter project:
+This app is inspired on https://github.com/hidroh/materialistic, but in flutter. The goal is not to clone that app, or its features, just a visual reference.
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+The app will be a real success i can replace my personal use of materialistic with this app
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Api
+
+This app is using the official hn api.
