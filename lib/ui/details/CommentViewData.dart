@@ -4,6 +4,8 @@ import 'package:hacker_newz/repo/ApiService.dart';
 import 'package:hacker_newz/model/HNItem.dart';
 import 'package:hacker_newz/ui/details/CommentView.dart';
 import 'package:timeago/timeago.dart' as timeago;
+import 'package:flutter_html_view/flutter_html_view.dart';
+
 
 class CommentViewData extends StatefulWidget {
   final int depth;
@@ -69,13 +71,12 @@ class _CommentViewData extends State<CommentViewData> {
                     getRow1(context),
                     Container(
                       padding: const EdgeInsets.only(bottom: 8.0),
-                      child: Text(
-                        item.text,
-                        maxLines: 2,
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.white,
-                        ),
+                      child: HtmlView(
+                        data: item.text,
+//                        style: TextStyle(
+//                          fontSize: 16,
+//                          color: Colors.white,
+//                        ),
                       ),
                     ),
                     getShowHideButton(context),
@@ -107,7 +108,7 @@ class _CommentViewData extends State<CommentViewData> {
                 timeago.format(item.time) ,
                 style: TextStyle(
                   color: Colors.grey,
-                  fontSize: 16,
+                  fontSize: 12,
                 ),
               ),
               Text(
@@ -155,7 +156,7 @@ class _CommentViewData extends State<CommentViewData> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Text("4 Comments",
+          Text(item.kids.length.toString() + " Comments",
               style: TextStyle(
                 color: color,
               )),
